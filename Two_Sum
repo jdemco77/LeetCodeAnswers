@@ -1,0 +1,15 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+   
+        i=0                          #keep first item index
+        for num in nums:             #iterate through items
+            tar=target- num          #subtract to obtain new target to check second loop
+            
+            j=i+1                    #never check same number twice
+            while j < len(nums):     
+                if tar-nums[j]==0:    
+                    return i,j
+                j=j+1
+             
+            i=i+1
+            
